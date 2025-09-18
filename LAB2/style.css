@@ -1,0 +1,35 @@
+body{
+    max-width: 800px;
+    margin:auto;
+    background-color: rgb(189, 189, 238);
+}
+
+section{
+    background-color: rgb(153, 153, 222);
+    padding:30px;
+    margin-bottom:10px;
+    border-radius:20px
+}
+
+
+.fotografias img{
+    height: 150px;
+    width: 200px;
+    border-radius: 20px;
+}
+
+.fotografias{
+    display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   gap:10px;
+   
+
+}
+iframe{
+    border-radius: 20px;
+}
+
+
