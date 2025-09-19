@@ -25,11 +25,31 @@ section{
    justify-content: center;
    align-items: center;
    gap:10px;
-   
-
 }
+
 iframe{
     border-radius: 20px;
+}
+
+.poesia p:nth-child(even):hover{
+
+    color: purple;
+
+}
+.poesia p:nth-child(odd):hover{
+    color: rgb(221, 4, 163);
+
+}
+
+.navegacao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+td,th{
+    padding: 5px;
+    text-align: center;
+
 }
 
 
