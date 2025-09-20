@@ -1,9 +1,88 @@
 body{
-    max-width: 800px;
-    margin:auto;
-    background-color: rgb(189, 189, 238);
+    margin: 0px;
+    padding: 0px;
+    background-color: whitesmoke;
+}
+header{
+    margin: 0px;
+    padding: 0px;
 }
 
+.cidade{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(238, 219, 107);
+    color: whitesmoke;
+    font-family:'Times New Roman', Times, serif;
+    height: 80px;
+}
+h1{
+    margin:0px
+}
+.navbar{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(240, 196, 102);
+}
+
+.option{
+    margin: 40px;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    color: whitesmoke;
+}
+
+.threephotos{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 270px;
+   
+}
+
+
+.threephotos img{
+    margin: 20px;
+    width: 380px;
+    height: 280px;
+    border-radius: 40px;
+
+}
+
+.sect{
+    background-color: whitesmoke;
+    margin-top: 10px;
+    height: 130px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.home{
+    color: white;
+    height: 100px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(175, 129, 69);
+
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    height: 150px;
+    background-color:  rgb(238, 219, 107);
+    color: white;
+}
+
+
+
+/*parte multimedia*/
 section{
     background-color: rgb(153, 153, 222);
     padding:30px;
