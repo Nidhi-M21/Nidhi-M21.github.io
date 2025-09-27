@@ -5,12 +5,22 @@
 }
 
 body{
-    
-    background-color: #7c6868;
+    background-color: #f7f4f3;
+  
+}
+header{
+    position: sticky;
+    top:0;
 }
 nav{
+   
+height:60px;
+display: flex;
+justify-content: right;
+align-items: center;
+background-color: #ffffff42;
 
-height:40px;
+
 }
 
 nav ul{
@@ -19,12 +29,17 @@ nav ul{
     padding:0;
     margin: 0;
     display: flex;
-    gap:15px;
+    gap:20px;
+    padding-right: 60px;
 
 }
 nav a{
+   
     text-decoration:none;
     color: inherit;
+    font-weight: bold;
+    font-size: 20px;
+
 }
 
 #hero{
@@ -53,33 +68,91 @@ nav a{
     border-radius:15px ;
     border: 2px solid white;
 }
-#hero a{
+a{
     text-decoration: none;
     color:inherit;
-
 }
 #projetos{
     height:100vh;
     background-color: #f7f4f3;
 }
 
-#projetos h1{
+#projetos h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding:30px;
+    padding:50px;
     color: #5b2333;
-  
+    font-weight: bold;
+    font-size: 50px;
+    text-decoration-line: underline;
 
 }
 
+.projetosLab{
 
+    height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 
-
-
-ul{
-    color: rgb(1, 12, 9);
 }
-img{
-    width:300px;
+#lab{
+
+    background-color: rgb(63, 12, 35);
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#lab h3{
+
+    font-weight: 700px;
+    font-size: 50px;
+    font-family: 'Bitcount Prop Single Ink';
+
+
+}
+
+#cadeira{
+    background-color: #5b2333;
+    height: 100vh;
+    color: whitesmoke;
+}
+
+#cadeira h1{
+    color: #f7f4f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:50px;
+    font-weight: bold;
+    font-size: 50px;
+    text-decoration-line: underline;
+}
+#cadeira div{
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+#cadeira ul{
+    color: whitesmoke;
+}
+
+#cadeira img{
+    padding-right:50px;
+    width: 200px;
+}
+
+
+footer{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
