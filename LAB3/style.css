@@ -100,7 +100,7 @@ section{
     border-radius:20px
 }
 
-#titulo{
+.titulo{
     display: flex;
     justify-content: center;
     color: #552704;
@@ -113,8 +113,6 @@ section{
     font-size: 30px;
    margin: 20px;
 }
-
-
 
 
 #museu{
@@ -209,6 +207,18 @@ td,th{
 
 }
 
+/*LOCALIZAÇAO*/
+.conteinerLocal{
+    display: flex;
+}
+.textLocal{
+    justify-content: flex-start;
+}
+
+
+
+
+
 @media(max-width:600px){
 
     .cidade{
@@ -260,6 +270,13 @@ td,th{
         top:10px;
          right: 20px;
      }
+
+     /*Localizaçao*/
+     .conteinerLocal{
+        flex-wrap: wrap;
+     }
+
+     
 
 
 
