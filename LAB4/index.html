@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    
 
     <title>Document</title>
 </head>
@@ -19,10 +20,31 @@
 
     <main>
 
-        <p>Qual a tua cor favorita?</p>
-        <button">Verde</button>
-        <button>Vermelho</button>
-        <button>Azul</button>
+     
+
+        <button onclick="contar()">Clica Aqui para contar</button>
+        <span id="count">0</span>
+        <br>
+        <br>
+        <button onclick="reset()">Clica Aqui para reset</button>
+      
+
+        <h1 id="texto">Clica 2 vezes</h1>
+
+        <button ondblclick="mudarEmoji()">Clica Aqui</button>
+
+        <h1 id="mudaEmogi"onmouseover="emojiPassaTriste()" onmouseout="emojiPassaContente()"  > Passa por cima: 😊</h1>
+
+        <div id="caixa" style="width:100px; height:100px; background-color:black;" onmousemove="trocarFundo()"  onmouseout="trocarFundoDepois()"></div>
+
+
+
+
+
+
+
+
+       
 
 
     </main>
