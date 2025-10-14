@@ -1,0 +1,61 @@
+*{
+    margin: 0px;
+    padding:0px;
+}
+/*  BARRA DE NAVEGAÇÃO */
+header{
+    height:60px;
+    background-color:blueviolet;
+    display: flex;
+    justify-content: space-between;
+    top:0px;
+    position:sticky;
+
+}
+
+header nav{
+    display:flex;
+    justify-content:flex-end;
+    margin: 30px;  
+}
+
+header h1{
+    display:flex;
+    align-items: center;
+    margin:10px;
+    color:white;
+}
+
+nav ul{
+    display:flex;
+    align-items: center;
+    list-style: none;
+    gap:10px;
+  
+}
+
+li a{
+    text-decoration: none;
+    color:white;
+}
+
+/*PRODUTOS*/
+
+#produtos{
+    background-color:pink;
+    height:100vh;
+
+    
+}
+
+#cesto{
+    background-color:rgb(85, 16, 27);
+    height:100vh;
+
+}
+
+
+
+ /*criar uma funçao para defenir o article e colocar la as informações dos produtos e com ajuda do grid formatar os articles */
+
+

@@ -189,27 +189,25 @@
 
         <section id="conta">
             <button>Conta!</button>
-            <p>0</p>
+            <p id="teste">0</p>
 
             <script>
 
                 //A. VARVIÁVEIS
 
                const botaoConta=document.querySelector("#conta button");
-                const texto= document.querySelector("#conta p");
+                const texto2= document.querySelector("#teste");
                 let count=0;
                 //B.HENDLERS
 
                 function contar(){
-                    
-                     
                     count++;
-                    texto.textContent=count;
+                    texto2.textContent=count;
                 }
 
                 //c. ATRIBUIÇÃO
 
-                botaoConta.onclick=contar;
+              botaoConta.onclick=contar;
 
             </script>
 
