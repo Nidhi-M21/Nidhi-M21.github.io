@@ -40,12 +40,6 @@
         }
 
 
-        #corPag{
-            height: 80px;
-            width: 300px;
-
-
-        }
     </style>
 </head>
 
@@ -83,46 +77,29 @@
             </script>
         </section>
 
-        <section id="idPinta">
-
+                <section id="pintar">
             <p>2. Pinta-me!</p>
-            <button >Red</button>
-            <button>Green</button>
-            <button>Blue</button>
+            <button class="color" data-color="red">Red</button>
+            <button class="color" data-color="green">Green</button>
+            <button class="color" data-color="blue">Blue</button>
 
             <script>
+                //A. VARVIÁVEIS
+                const frase2 = document.querySelector("#pintar p");
 
-                //A variáveis
+                //B.HENDLERS
+                document.querySelectorAll('button').forEach(function (button) {
+                    button.onclick = function () {
+                        frase2.style.color = button.dataset.color;
 
-                const botaoRed = document.querySelector("#idPinta button:nth-child(2)");
-                const botaoGreen = document.querySelector("#idPinta button:nth-child(3)");
-                const botaoBlue = document.querySelector("#idPinta button:nth-child(4)");
-                const paragrafo = document.querySelector("#idPinta p");
-
-
-                //B.
-                function mudarCor(cor) {
-                    paragrafo.style.color = cor;
-                }
-
-                //C. event listnerts
-
-                botaoRed.onclick = () => mudarCor('red');
-                botaoGreen.onclick = () => mudarCor('green');
-                botaoBlue.onclick = () => mudarCor('blue');
-
-                //OU 
-                // botaoBlue.addEventListener('click', ()=> mudarCor('blue'));
+                    }
+                })
 
             </script>
-
-
-            <section>
-
-            </section>
-
         </section>
 
+
+  
 
         <section id="escrever">
 
@@ -188,70 +165,131 @@
 
 
         <section id="conta">
+            <p>5.</p>
             <button>Conta!</button>
             <p id="teste">0</p>
 
+
+
+
             <script>
 
-                //A. VARVIÁVEIS
 
-               const botaoConta=document.querySelector("#conta button");
-                const texto2= document.querySelector("#teste");
-                let count=0;
-                //B.HENDLERS
 
-                function contar(){
-                    count++;
-                    texto2.textContent=count;
+                const botaoConta = document.querySelector("#conta button");
+                const texto2 = document.querySelector("#teste");
+
+
+                if (!localStorage.getItem('counter')) {
+                    localStorage.setItem('counter', 0);
                 }
 
-                //c. ATRIBUIÇÃO
+                texto2.textContent = localStorage.getItem('counter');
+                let contador = Number(localStorage.getItem('counter'));
 
-              botaoConta.onclick=contar;
+                function contar() {
+        
+                    contador++;
+                    localStorage.setItem('counter', contador);
+                        console.log("Contador atual:", contador);
+
+                    texto2.textContent = contador;
+                    
+                }
+
+
+                botaoConta.onclick = contar;
+
+
 
             </script>
+
 
         </section>
 
 
-        <section id="pintar">
-               <p>6. Pinta-me!</p>
-            <button class="color" data-color="red">Red</button>
-            <button class="color" data-color="green">Green</button>
-            <button class="color" data-color="blue">Blue</button>
 
-            <script>
-                   //A. VARVIÁVEIS
-                   const frase2= document.querySelector("#pintar p");
+        <section id="corPag">
 
-                      //B.HENDLERS
-                      document.querySelectorAll('button').forEach(function(button) {
-                        button.onclick=function(){
-                            frase2.style.color=button.dataset.color;
-
-                        }
-                      })
-
-            </script>
-        </section>
-
-         <section id="corPag">
-
-            <label for="cor">7. Escolhe uma cor:</label>
+            <label for="cor">6. Escolhe uma cor:</label>
 
             <select name="cores" id="selectColor">
-             <option value="green">Green</option>
-            <option value="red">Red</option>
-            <option value="blue">Blue</option>
-             </select>
+                <option value="green">Green</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+            </select>
 
             <script>
 
-              document.querySelector('#selectColor').onchange = function() {
-                
-                document.querySelector('main').style.backgroundColor = this.value;
+                document.querySelector('#selectColor').onchange = function () {
+
+                    document.querySelector('main').style.backgroundColor = this.value;
                 }
-                  
+
+
+            </script>
+        </section>
+
+
+        <section id="formulario">
+            <p>7.</p>
+            <form>
+                <input id="nome" type="text" placeholder="insira o seu nome">
+                <input id="idade" type="text" placeholder="insira a sua idade">
+                <input type="submit">
+                <br>
+
+            </form>
+
+
+            <script>
+
+                //A.variáveis
+                const form = document.querySelector("form");
+
+                function enviarMsg(evento) {
+                    evento.preventDefault()
+                    const nome = document.querySelector("#nome").value;
+                    const idade = document.querySelector("#idade").value;
+                    const frase = document.createElement("p");
+                    frase.textContent = `Olá, o ${nome} tem ${idade}!`;
+
+                    document.querySelector("#formulario").append(frase);
+
+                }
+
+
+                //C.
+
+                form.onsubmit = enviarMsg;
+
+            </script>
+
+
+        </section>
+
+
+        <section id="interval">
+
+            <p>8. Contador: <span> </span>
+            </p>
+
+
+
+
+
+
+            <script>
+                let num=0;
+                const span= document.querySelector("span");
+
+                function contagem(){
+
+                    span.innerHTML=++contador;
+                }
+
+                setInterval(contagem,1000);
+
 
             </script>
         </section>
@@ -260,7 +298,7 @@
 
 
 
-  
+
 
     </main>
 
