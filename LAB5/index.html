@@ -38,6 +38,14 @@
             padding: 5px;
             border-radius: 10px;
         }
+
+
+        #corPag{
+            height: 80px;
+            width: 300px;
+
+
+        }
     </style>
 </head>
 
@@ -78,7 +86,7 @@
         <section id="idPinta">
 
             <p>2. Pinta-me!</p>
-            <button>Red</button>
+            <button >Red</button>
             <button>Green</button>
             <button>Blue</button>
 
@@ -124,24 +132,24 @@
             <script>
 
                 //A. VARIÁVEIS
-                  const input= document.querySelector(" #escrever input")
+                const input = document.querySelector(" #escrever input")
 
 
                 //B. FUNÇÕES
-                const cores=['red','green','blue'];
-                let i=0;
+                const cores = ['red', 'green', 'blue'];
+                let i = 0;
 
-                function colorir(){
-                    input.style.backgroundColor=cores[i];
-                      i++;
-                    if(i>=3){
-                        i=0;
+                function colorir() {
+                    input.style.backgroundColor = cores[i];
+                    i++;
+                    if (i >= 3) {
+                        i = 0;
                     }
-                  
+
                 }
 
                 //C. DEFINIR evento
-                input.onkeyup=colorir;
+                input.onkeyup = colorir;
 
             </script>
         </section>
@@ -150,48 +158,116 @@
 
         <section id="ingles">
 
-            <label for="input">Escolhe uma cor em inglês:</label>
-            <input type="text">
+            <label for="cor">4. Escolhe uma cor em inglês:</label>
+            <input type="text" id="cor">
             <button>submeter</button>
 
-                <script>
+            <script>
 
-                    //A. variáveis
-                        const input= document.querySelector("#ingles input");
-                         const botao= document.querySelector("#ingles button");
+                //A. variáveis
+                const inputPalavra = document.querySelector("#ingles input");
+                const botao = document.querySelector("#ingles button");
+                const back = document.querySelector("main")
 
-                         //B. event handler
+                console.log(inputPalavra, botao);
+                //B. event handler
 
-                         function mundaBackground(){
-                            document.querySelector("body").style.backgroundColor=input.value;
-                            
-                         }
+                function mudaBackground() {
+                    back.style.backgroundColor = inputPalavra.value;
 
-
-                         //C. event listeners
-                        botao.onclick= mundaBackground;
+                }
 
 
-                         
+                //C. event listeners
+                botao.onclick = mudaBackground;
+
+            </script>
 
 
+        </section>
+
+
+        <section id="conta">
+            <button>Conta!</button>
+            <p>0</p>
+
+            <script>
+
+                //A. VARVIÁVEIS
+
+               const botaoConta=document.querySelector("#conta button");
+                const texto= document.querySelector("#conta p");
+                let count=0;
+                //B.HENDLERS
+
+                function contar(){
                     
+                     
+                    count++;
+                    texto.textContent=count;
+                }
+
+                //c. ATRIBUIÇÃO
+
+                botaoConta.onclick=contar;
+
+            </script>
+
+        </section>
 
 
+        <section id="pintar">
+               <p>6. Pinta-me!</p>
+            <button class="color" data-color="red">Red</button>
+            <button class="color" data-color="green">Green</button>
+            <button class="color" data-color="blue">Blue</button>
 
-                </script>
+            <script>
+                   //A. VARVIÁVEIS
+                   const frase2= document.querySelector("#pintar p");
 
+                      //B.HENDLERS
+                      document.querySelectorAll('button').forEach(function(button) {
+                        button.onclick=function(){
+                            frase2.style.color=button.dataset.color;
+
+                        }
+                      })
+
+            </script>
+        </section>
+
+         <section id="corPag">
+
+            <label for="cor">7. Escolhe uma cor:</label>
+
+            <select name="cores" id="selectColor">
+             <option value="green">Green</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+             </select>
+
+            <script>
+
+              document.querySelector('#selectColor').onchange = function() {
+                
+                document.querySelector('main').style.backgroundColor = this.value;
+                }
+                  
+
+            </script>
         </section>
 
 
 
 
 
-
-
-
+  
 
     </main>
+
+
+
 
 
 
