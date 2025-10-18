@@ -2,6 +2,12 @@
     margin: 0px;
     padding:0px;
 }
+
+main{
+
+    padding-left: 100px;
+    padding-right: 100px;
+}
 /*  BARRA DE NAVEGAÇÃO */
 header{
     height:60px;
@@ -39,20 +45,94 @@ li a{
     color:white;
 }
 
+
+main h2{
+    text-align: center;
+    margin-top: 60px;
+}
+
 /*PRODUTOS*/
 
 #produtos{
-    background-color:pink;
-    height:100vh;
-
+    padding: 50px;
+    background-color:rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
     
+
 }
+
+#produtos article{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: seagreen 5px solid;
+   
+}
+
+article h4{
+     text-align: center;
+     margin-bottom: 10px;
+     font-size: 25px;
+}
+
+
+article img{
+       width: 100%;
+}
+
+article h5 {
+
+    text-align: center;
+    font-size: 16px; 
+    margin-bottom: 15px;
+}
+
+article p{
+
+    background-color: beige;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+article button{
+    border-radius: 8px;
+}
+
+
+ 
 
 #cesto{
-    background-color:rgb(85, 16, 27);
-    height:100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+
+
+/*CESTO*/
+
+#cesto{
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+   
+}
+
+#cesto article{
+
+ border: seagreen 5px solid;
+  width: 100px;
+  
 
 }
+
+
 
 
 
