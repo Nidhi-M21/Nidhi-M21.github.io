@@ -8,6 +8,7 @@ if(!localStorage.getItem('produtos-selecionados')){
 document.addEventListener('DOMContentLoaded', function() {carregarProdutos(produtos);});
 document.addEventListener('DOMContentLoaded', function() {atualizarCesto()});
 
+
 //Defenir função 
 
 function carregarProdutos(produtos){
@@ -64,7 +65,7 @@ function criarProduto(produto){
 
         localStorage.setItem('produtos-selecionados',JSON.stringify(produtosSelecionados))
 
- console.log("Produtos selecionados agora são:", produtosSelecionados);
+ atualizarCesto();
 
     });
 
@@ -127,7 +128,7 @@ function removerProdutoCesto(idProduto){
         //colocar lista como string
 
        localStorage.setItem('produtos-selecionados',JSON.stringify(listaProdutos));
- console.log("Produto removido com sucesso!", listaProdutos);
+
 
 
 }
@@ -155,8 +156,30 @@ function atualizarCesto(){
     );
 
 
+mostraPreco();
+
 
 console.log("Cesto atualizado com", listaProdutos.length, "produtos.");
+
+}
+
+
+function mostraPreco(){
+
+    let preco=0;
+
+    const parteCesto= document.getElementById('precoTotal');
+
+    const listaProdutos=JSON.parse(localStorage.getItem('produtos-selecionados'));
+
+    listaProdutos.forEach(produto=>{
+        preco+=produto.price;
+
+    })
+
+    parteCesto.textContent=`Custo total: ${preco} €`;
+
+
 
 }
 
