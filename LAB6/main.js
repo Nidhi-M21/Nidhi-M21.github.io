@@ -61,7 +61,7 @@ function criarProduto(produto){
 
         produtosSelecionados.push(produto);// adicionei o produto á lista
 
-        // roenar a lista string 
+    //voltei a colocar como string
 
         localStorage.setItem('produtos-selecionados',JSON.stringify(produtosSelecionados))
 
@@ -106,8 +106,6 @@ function criarProdutoCesto(produto){
         atualizarCesto();
     
     });
-
-
    
 
     console.log("criei produtos cesto");
@@ -125,11 +123,11 @@ function removerProdutoCesto(idProduto){
 
         listaProdutos.splice(indiceDoElementoRemover,1);
 
+        
+
         //colocar lista como string
 
        localStorage.setItem('produtos-selecionados',JSON.stringify(listaProdutos));
-
-
 
 }
 
@@ -141,7 +139,7 @@ function atualizarCesto(){
 
     const cesto = document.getElementById('cesto');
 
-    //linmpar cesto
+    //linmpar cesto so para segurança limpo antes
 
     cesto.innerHTML='';
 
@@ -178,8 +176,6 @@ function mostraPreco(){
     })
 
     parteCesto.textContent=`Custo total: ${preco} €`;
-
-
 
 }
 
