@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {atualizarCesto()});
 
 function carregarProdutos(produtos){
 
-     console.log("Função carregarProdutos foi chamada!");
+ 
     const sectionProdutos=document.getElementById("produtos");
 
     produtos.forEach(
@@ -65,7 +65,7 @@ function criarProduto(produto){
 
         localStorage.setItem('produtos-selecionados',JSON.stringify(produtosSelecionados))
 
- atualizarCesto();
+        atualizarCesto();
 
     });
 

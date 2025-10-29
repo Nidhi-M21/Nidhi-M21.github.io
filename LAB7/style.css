@@ -1,0 +1,157 @@
+*{
+    margin: 0px;
+    padding:0px;
+}
+
+body{
+    background-color: whitesmoke;
+}
+/*  BARRA DE NAVEGAÇÃO */
+header{
+    height:60px;
+    background-color:darkmagenta;
+    display: flex;
+    justify-content: space-between;
+    top:0px;
+    position:sticky;
+
+}
+
+header nav{
+    display:flex;
+    justify-content:flex-end;
+    margin: 30px;  
+}
+
+header h1{
+    display:flex;
+    align-items: center;
+    margin:10px;
+    color:white;
+}
+
+nav ul{
+    display:flex;
+    align-items: center;
+    list-style: none;
+    gap:10px;
+  
+}
+
+li a{
+    text-decoration: none;
+    color:white;
+}
+
+
+main h2{
+    text-align: center;
+    margin-top: 60px;
+    background-color: whitesmoke;
+}
+
+/*PRODUTOS*/
+
+#produtos{
+    padding: 50px;
+    background-color:whitesmoke;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    
+
+}
+
+#produtos article{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: white;
+   
+}
+
+article h4{
+     text-align: center;
+     margin-bottom: 10px;
+     font-size: 25px;
+}
+
+
+article img{
+       width: 100%;
+}
+
+article h5 {
+
+    text-align: center;
+    font-size: 16px; 
+    margin-bottom: 15px;
+}
+
+article p{
+
+    background-color: whitesmoke;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+article button{
+    border-radius: 8px;
+}
+
+
+
+/*CESTO*/
+
+
+#produtosSelecionados{
+    background-color: darkmagenta;
+    padding: 20px;
+    color: whitesmoke;
+}
+
+#cesto{
+
+    min-height: 200px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap:10px;
+    background-color: darkmagenta;
+   
+}
+
+#precoTotal{
+    padding: 20px;
+    text-align: center;
+    background-color: darkmagenta;
+    color:whitesmoke;
+}
+
+
+
+#cesto article{
+
+    border-radius: 15px;
+    width: 150px;
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+
+}
+
+
+
+footer{
+    height: 50px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
