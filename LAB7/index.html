@@ -34,7 +34,23 @@
 
             </div>
 
+            <div id="ordenarProdutos">
 
+                <label>Ordenar</label>
+                <select name="opcaoesOrdenar" id="secOrdenar">
+                <option value="preco">Ordenar pelo Preço</option>
+                <option value="des">Preço Descendente</option>
+                <option value="cres">Preço Crescendente</option>
+                </select>
+
+            </div>
+
+            <div id="procurarProdutos">
+                <label>Procurar</label>
+                <input id="procurar" type="text" placeholder="pesquise por Produto">
+
+
+            </div>
 
          </section>
 
@@ -54,7 +70,18 @@
 
 
         </section>
-         <h3 id="precoTotal">Custo total: 0 €</h3>
+
+        <section id="mostraPreco">
+            <h3 id="precoTotal">Custo total: 0 €</h3>
+          <label>És estudante do DEISI?</label>
+          <input type="checkbox" id="butaoCheck">
+          <label>Cupão de desconto</label>
+          <input type="text">
+          <button id="comprar">Comprar</button>
+          <h3 id="desconto"> </h3>
+
+        </section>
+         
 
 
     </main>

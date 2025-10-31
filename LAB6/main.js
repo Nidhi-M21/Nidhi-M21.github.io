@@ -59,10 +59,9 @@ function criarProduto(produto){
 
         let produtosSelecionados= JSON.parse(localStorage.getItem('produtos-selecionados'));
 
-        produtosSelecionados.push(produto);// adicionei o produto á lista
+        produtosSelecionados.push(produto);
 
     //voltei a colocar como string
-
         localStorage.setItem('produtos-selecionados',JSON.stringify(produtosSelecionados))
 
         atualizarCesto();
