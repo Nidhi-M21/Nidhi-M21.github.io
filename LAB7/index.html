@@ -11,7 +11,9 @@
 <body>
 
     <header>
-        <h1>Loja</h1>
+
+        <img src="imagens/deisi.png" alt="">
+        <h1>Loja DEISI</h1>
         <nav>
             <ul>
                 <li><a href="#produtos">Produtos</a></li>
@@ -21,9 +23,9 @@
     </header>
 
     <main>
-         <h2>Selecione os seus Produtos</h2>
+        <h2>Selecione os seus Produtos</h2>
 
-         <section>
+        <section id="pesquisa">
 
             <div id="filtrarprodutos">
                 <label id="filtro">Filtrar</label>
@@ -38,9 +40,9 @@
 
                 <label>Ordenar</label>
                 <select name="opcaoesOrdenar" id="secOrdenar">
-                <option value="preco">Ordenar pelo Preço</option>
-                <option value="des">Preço Descendente</option>
-                <option value="cres">Preço Crescendente</option>
+                    <option value="preco">Ordenar pelo Preço</option>
+                    <option value="des">Preço Descendente</option>
+                    <option value="cres">Preço Crescendente</option>
                 </select>
 
             </div>
@@ -52,37 +54,43 @@
 
             </div>
 
-         </section>
+        </section>
 
-        
+
 
         <section id="produtos">
-            
+
 
 
         </section>
 
 
-            <h2 id="produtosSelecionados">Produtos Selecionados</h2>
+        <h2 id="produtosSelecionados">Produtos Selecionados</h2>
 
-         <section id="cesto">
+        <section id="cesto">
+
+
+
+        </section>
+
+        <section id="secPrecoEstilo">
+            <section id="mostraPreco">
+                <h3 id="precoTotal">Custo total: 0 €</h3>
+               <div id="estudante">
+                 <label for="butaoCheck">És estudante do DEISI?</label>
+                <input type="checkbox" id="butaoCheck">
+               </div>
                
-
-
-        </section>
-
-        <section id="mostraPreco">
-            <h3 id="precoTotal">Custo total: 0 €</h3>
-          <label>És estudante do DEISI?</label>
-          <input type="checkbox" id="butaoCheck">
-          <label>Cupão de desconto</label>
-          <input type="text">
-          <button id="comprar">Comprar</button>
-          <h3 id="desconto"> </h3>
+               <div id="cupao">
+                  <label for="texto">Cupão de desconto</label>
+                  <input id="texto" type="text">
+               </div>
+              
+                <button id="comprar">Comprar</button>
+                <h3 id="desconto"> </h3>
+            </section>
 
         </section>
-         
-
 
     </main>
 

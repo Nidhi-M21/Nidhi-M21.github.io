@@ -105,6 +105,15 @@ function criarProduto(produto) {
     const descricao = document.createElement("p");
     descricao.textContent = produto.description
 
+
+    const rating=produto.rating.rate;
+    const avaliacao=produto.rating.count;
+
+    const fraseRating=document.createElement("h5");
+    const estrelas="⭐".repeat(Math.floor(rating));
+    fraseRating.textContent = `${rating} ${estrelas} (${avaliacao} avaliações)`;
+
+
     const botao = document.createElement("button");
     botao.textContent = "+ Adicionar ao Cesto";
 
@@ -117,7 +126,7 @@ function criarProduto(produto) {
     });
 
 
-    artigo.append(titulo, secImg, preco, descricao, botao);
+    artigo.append(titulo, secImg, preco, descricao,fraseRating,botao);
 
     return artigo;
 
@@ -240,7 +249,7 @@ function mostraPreco(){
     if(checkBox.checked==true){
         const textPrecoComDesconto=document.getElementById("desconto");
         preco=preco*(1-0.25);
-        textPrecoComDesconto.textContent=`Valor final a pagar (com eventuais descontos):${preco}`;
+        textPrecoComDesconto.textContent=`Valor final a pagar (com eventuais descontos):${preco.toFixed(2)} €`;
         sectionMostraPreco.append(textPrecoComDesconto);
     }
 });
